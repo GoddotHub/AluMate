@@ -34,6 +34,7 @@ class ProjectUpdate(BaseModel):
 class ProjectResponse(BaseModel):
     id: int
     customer_id: int
+    customer_name: str | None = None  # Added field for human-readable name
     name: str
     description: str | None
     location: str | None
