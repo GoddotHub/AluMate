@@ -13,272 +13,564 @@
             base.Dispose(disposing);
         }
 
-        #region Component Designer generated code
-
         private void InitializeComponent()
         {
-            this.pnlKpiContainer = new System.Windows.Forms.Panel();
-            this.cardTotal = new System.Windows.Forms.Panel();
-            this.accentTotal = new System.Windows.Forms.Panel();
-            this.lblTotalValue = new System.Windows.Forms.Label();
-            this.lblTotalTitle = new System.Windows.Forms.Label();
-            this.cardActive = new System.Windows.Forms.Panel();
-            this.accentActive = new System.Windows.Forms.Panel();
-            this.lblActiveValue = new System.Windows.Forms.Label();
-            this.lblActiveTitle = new System.Windows.Forms.Label();
-            this.cardSuccess = new System.Windows.Forms.Panel();
-            this.accentSuccess = new System.Windows.Forms.Panel();
-            this.lblSuccessValue = new System.Windows.Forms.Label();
-            this.lblSuccessTitle = new System.Windows.Forms.Label();
-            this.cardDelayed = new System.Windows.Forms.Panel();
-            this.accentDelayed = new System.Windows.Forms.Panel();
-            this.lblDelayedValue = new System.Windows.Forms.Label();
-            this.lblDelayedTitle = new System.Windows.Forms.Label();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.pnlKpiContainer.SuspendLayout();
-            this.cardTotal.SuspendLayout();
-            this.cardActive.SuspendLayout();
-            this.cardSuccess.SuspendLayout();
-            this.cardDelayed.SuspendLayout();
-            this.SuspendLayout();
+            pnlKpiTotal = new Panel();
+            lblTotalTitle = new Label();
+            lblTotalValue = new Label();
+            pnlKpiTotalAccent = new Panel();
+            pnlKpiActive = new Panel();
+            lblActiveTitle = new Label();
+            lblActiveValue = new Label();
+            pnlKpiActiveAccent = new Panel();
+            pnlKpiRevenue = new Panel();
+            lblRevenueTitle = new Label();
+            lblRevenueValue = new Label();
+            pnlKpiRevenueAccent = new Panel();
+            pnlKpiDelayed = new Panel();
+            lblDelayedTitle = new Label();
+            lblDelayedValue = new Label();
+            pnlKpiDelayedAccent = new Panel();
+            pnlWelcomeBanner = new Panel();
+            lblWelcomeGreeting = new Label();
+            lblWelcomeSubtitle = new Label();
+            pnlFeaturedProject = new Panel();
+            lblFeaturedTitle = new Label();
+            lblFeaturedCustomer = new Label();
+            lblFeaturedStatus = new Label();
+            lblFeaturedDate = new Label();
+            btnOpenFeaturedWorkspace = new Button();
+            pnlAttentionCenter = new Panel();
+            lblAttentionCenterContent = new Label();
+            pnlActivityFeed = new Panel();
+            lblRecentActivityFeed = new Label();
+            pnlBusinessHealth = new Panel();
+            lblBusinessHealthLegend = new Label();
+            pnlActiveSnapshot = new Panel();
+            dgvActiveSnapshot = new DataGridView();
+            pnlTopActiveCards = new FlowLayoutPanel();
+            lblTotalQuotedValue = new Label();
+            btnQuickNewCustomer = new Button();
+            btnQuickNewProject = new Button();
+            btnQuickNewQuotation = new Button();
+            btnQuickRecordExpense = new Button();
+            pnlKpiTotal.SuspendLayout();
+            pnlKpiActive.SuspendLayout();
+            pnlKpiRevenue.SuspendLayout();
+            pnlKpiDelayed.SuspendLayout();
+            pnlWelcomeBanner.SuspendLayout();
+            pnlFeaturedProject.SuspendLayout();
+            pnlAttentionCenter.SuspendLayout();
+            pnlActivityFeed.SuspendLayout();
+            pnlBusinessHealth.SuspendLayout();
+            pnlActiveSnapshot.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvActiveSnapshot).BeginInit();
+            SuspendLayout();
             // 
-            // pnlKpiContainer
+            // pnlKpiTotal
             // 
-            this.pnlKpiContainer.BackColor = System.Drawing.Color.FromArgb(245, 247, 250);
-            this.pnlKpiContainer.Controls.Add(this.cardDelayed);
-            this.pnlKpiContainer.Controls.Add(this.cardSuccess);
-            this.pnlKpiContainer.Controls.Add(this.cardActive);
-            this.pnlKpiContainer.Controls.Add(this.cardTotal);
-            this.pnlKpiContainer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlKpiContainer.Location = new System.Drawing.Point(0, 0);
-            this.pnlKpiContainer.Name = "pnlKpiContainer";
-            this.pnlKpiContainer.Padding = new System.Windows.Forms.Padding(20, 15, 20, 15);
-            this.pnlKpiContainer.Size = new System.Drawing.Size(1000, 110);
-            this.pnlKpiContainer.TabIndex = 0;
-            // 
-            // cardTotal
-            // 
-            this.cardTotal.BackColor = System.Drawing.Color.White;
-            this.cardTotal.Controls.Add(this.lblTotalTitle);
-            this.cardTotal.Controls.Add(this.lblTotalValue);
-            this.cardTotal.Controls.Add(this.accentTotal);
-            this.cardTotal.Location = new System.Drawing.Point(20, 15);
-            this.cardTotal.Name = "cardTotal";
-            this.cardTotal.Size = new System.Drawing.Size(210, 80);
-            this.cardTotal.TabIndex = 0;
-            // 
-            // accentTotal
-            // 
-            this.accentTotal.BackColor = System.Drawing.Color.FromArgb(41, 128, 185);
-            this.accentTotal.Dock = System.Windows.Forms.DockStyle.Left;
-            this.accentTotal.Location = new System.Drawing.Point(0, 0);
-            this.accentTotal.Name = "accentTotal";
-            this.accentTotal.Size = new System.Drawing.Size(5, 80);
-            this.accentTotal.TabIndex = 0;
-            // 
-            // lblTotalValue
-            // 
-            this.lblTotalValue.AutoSize = true;
-            this.lblTotalValue.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblTotalValue.ForeColor = System.Drawing.Color.FromArgb(40, 40, 40);
-            this.lblTotalValue.Location = new System.Drawing.Point(20, 10);
-            this.lblTotalValue.Name = "lblTotalValue";
-            this.lblTotalValue.Size = new System.Drawing.Size(64, 46);
-            this.lblTotalValue.TabIndex = 1;
-            this.lblTotalValue.Text = "124";
+            pnlKpiTotal.BackColor = Color.White;
+            pnlKpiTotal.Controls.Add(lblTotalTitle);
+            pnlKpiTotal.Controls.Add(lblTotalValue);
+            pnlKpiTotal.Controls.Add(pnlKpiTotalAccent);
+            pnlKpiTotal.Location = new Point(29, 33);
+            pnlKpiTotal.Margin = new Padding(4, 5, 4, 5);
+            pnlKpiTotal.Name = "pnlKpiTotal";
+            pnlKpiTotal.Size = new Size(321, 125);
+            pnlKpiTotal.TabIndex = 0;
             // 
             // lblTotalTitle
             // 
-            this.lblTotalTitle.AutoSize = true;
-            this.lblTotalTitle.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblTotalTitle.ForeColor = System.Drawing.Color.FromArgb(110, 110, 110);
-            this.lblTotalTitle.Location = new System.Drawing.Point(20, 50);
-            this.lblTotalTitle.Name = "lblTotalTitle";
-            this.lblTotalTitle.Size = new System.Drawing.Size(117, 20);
-            this.lblTotalTitle.TabIndex = 2;
-            this.lblTotalTitle.Text = "TOTAL PROJECTS";
+            lblTotalTitle.AutoSize = true;
+            lblTotalTitle.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblTotalTitle.ForeColor = Color.Gray;
+            lblTotalTitle.Location = new Point(21, 20);
+            lblTotalTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTotalTitle.Name = "lblTotalTitle";
+            lblTotalTitle.Size = new Size(159, 25);
+            lblTotalTitle.TabIndex = 1;
+            lblTotalTitle.Text = "TOTAL PROJECTS";
             // 
-            // cardActive
+            // lblTotalValue
             // 
-            this.cardActive.BackColor = System.Drawing.Color.White;
-            this.cardActive.Controls.Add(this.lblActiveTitle);
-            this.cardActive.Controls.Add(this.lblActiveValue);
-            this.cardActive.Controls.Add(this.accentActive);
-            this.cardActive.Location = new System.Drawing.Point(250, 15);
-            this.cardActive.Name = "cardActive";
-            this.cardActive.Size = new System.Drawing.Size(210, 80);
-            this.cardActive.TabIndex = 1;
+            lblTotalValue.AutoSize = true;
+            lblTotalValue.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblTotalValue.Location = new Point(21, 53);
+            lblTotalValue.Margin = new Padding(4, 0, 4, 0);
+            lblTotalValue.Name = "lblTotalValue";
+            lblTotalValue.Size = new Size(41, 48);
+            lblTotalValue.TabIndex = 2;
+            lblTotalValue.Text = "0";
             // 
-            // accentActive
+            // pnlKpiTotalAccent
             // 
-            this.accentActive.BackColor = System.Drawing.Color.FromArgb(39, 174, 96);
-            this.accentActive.Dock = System.Windows.Forms.DockStyle.Left;
-            this.accentActive.Location = new System.Drawing.Point(0, 0);
-            this.accentActive.Name = "accentActive";
-            this.accentActive.Size = new System.Drawing.Size(5, 80);
-            this.accentActive.TabIndex = 0;
+            pnlKpiTotalAccent.BackColor = Color.FromArgb(0, 120, 212);
+            pnlKpiTotalAccent.Location = new Point(0, 0);
+            pnlKpiTotalAccent.Margin = new Padding(4, 5, 4, 5);
+            pnlKpiTotalAccent.Name = "pnlKpiTotalAccent";
+            pnlKpiTotalAccent.Size = new Size(7, 125);
+            pnlKpiTotalAccent.TabIndex = 0;
             // 
-            // lblActiveValue
+            // pnlKpiActive
             // 
-            this.lblActiveValue.AutoSize = true;
-            this.lblActiveValue.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblActiveValue.ForeColor = System.Drawing.Color.FromArgb(40, 40, 40);
-            this.lblActiveValue.Location = new System.Drawing.Point(20, 10);
-            this.lblActiveValue.Name = "lblActiveValue";
-            this.lblActiveValue.Size = new System.Drawing.Size(48, 46);
-            this.lblActiveValue.TabIndex = 1;
-            this.lblActiveValue.Text = "85";
+            pnlKpiActive.BackColor = Color.White;
+            pnlKpiActive.Controls.Add(lblActiveTitle);
+            pnlKpiActive.Controls.Add(lblActiveValue);
+            pnlKpiActive.Controls.Add(pnlKpiActiveAccent);
+            pnlKpiActive.Location = new Point(364, 33);
+            pnlKpiActive.Margin = new Padding(4, 5, 4, 5);
+            pnlKpiActive.Name = "pnlKpiActive";
+            pnlKpiActive.Size = new Size(321, 125);
+            pnlKpiActive.TabIndex = 1;
             // 
             // lblActiveTitle
             // 
-            this.lblActiveTitle.AutoSize = true;
-            this.lblActiveTitle.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblActiveTitle.ForeColor = System.Drawing.Color.FromArgb(110, 110, 110);
-            this.lblActiveTitle.Location = new System.Drawing.Point(20, 50);
-            this.lblActiveTitle.Name = "lblActiveTitle";
-            this.lblActiveTitle.Size = new System.Drawing.Size(126, 20);
-            this.lblActiveTitle.TabIndex = 2;
-            this.lblActiveTitle.Text = "ACTIVE PROJECTS";
+            lblActiveTitle.AutoSize = true;
+            lblActiveTitle.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblActiveTitle.ForeColor = Color.Gray;
+            lblActiveTitle.Location = new Point(21, 20);
+            lblActiveTitle.Margin = new Padding(4, 0, 4, 0);
+            lblActiveTitle.Name = "lblActiveTitle";
+            lblActiveTitle.Size = new Size(167, 25);
+            lblActiveTitle.TabIndex = 1;
+            lblActiveTitle.Text = "ACTIVE PROJECTS";
             // 
-            // cardSuccess
+            // lblActiveValue
             // 
-            this.cardSuccess.BackColor = System.Drawing.Color.White;
-            this.cardSuccess.Controls.Add(this.lblSuccessTitle);
-            this.cardSuccess.Controls.Add(this.lblSuccessValue);
-            this.cardSuccess.Controls.Add(this.accentSuccess);
-            this.cardSuccess.Location = new System.Drawing.Point(480, 15);
-            this.cardSuccess.Name = "cardSuccess";
-            this.cardSuccess.Size = new System.Drawing.Size(210, 80);
-            this.cardSuccess.TabIndex = 2;
+            lblActiveValue.AutoSize = true;
+            lblActiveValue.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblActiveValue.Location = new Point(21, 53);
+            lblActiveValue.Margin = new Padding(4, 0, 4, 0);
+            lblActiveValue.Name = "lblActiveValue";
+            lblActiveValue.Size = new Size(41, 48);
+            lblActiveValue.TabIndex = 2;
+            lblActiveValue.Text = "0";
             // 
-            // accentSuccess
+            // pnlKpiActiveAccent
             // 
-            this.accentSuccess.BackColor = System.Drawing.Color.FromArgb(142, 68, 173);
-            this.accentSuccess.Dock = System.Windows.Forms.DockStyle.Left;
-            this.accentSuccess.Location = new System.Drawing.Point(0, 0);
-            this.accentSuccess.Name = "accentSuccess";
-            this.accentSuccess.Size = new System.Drawing.Size(5, 80);
-            this.accentSuccess.TabIndex = 0;
+            pnlKpiActiveAccent.BackColor = Color.FromArgb(16, 124, 65);
+            pnlKpiActiveAccent.Location = new Point(0, 0);
+            pnlKpiActiveAccent.Margin = new Padding(4, 5, 4, 5);
+            pnlKpiActiveAccent.Name = "pnlKpiActiveAccent";
+            pnlKpiActiveAccent.Size = new Size(7, 125);
+            pnlKpiActiveAccent.TabIndex = 0;
             // 
-            // lblSuccessValue
+            // pnlKpiRevenue
             // 
-            this.lblSuccessValue.AutoSize = true;
-            this.lblSuccessValue.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblSuccessValue.ForeColor = System.Drawing.Color.FromArgb(40, 40, 40);
-            this.lblSuccessValue.Location = new System.Drawing.Point(20, 10);
-            this.lblSuccessValue.Name = "lblSuccessValue";
-            this.lblSuccessValue.Size = new System.Drawing.Size(65, 46);
-            this.lblSuccessValue.TabIndex = 1;
-            this.lblSuccessValue.Text = "92%";
+            pnlKpiRevenue.BackColor = Color.White;
+            pnlKpiRevenue.Controls.Add(lblRevenueTitle);
+            pnlKpiRevenue.Controls.Add(lblRevenueValue);
+            pnlKpiRevenue.Controls.Add(pnlKpiRevenueAccent);
+            pnlKpiRevenue.Location = new Point(700, 33);
+            pnlKpiRevenue.Margin = new Padding(4, 5, 4, 5);
+            pnlKpiRevenue.Name = "pnlKpiRevenue";
+            pnlKpiRevenue.Size = new Size(321, 125);
+            pnlKpiRevenue.TabIndex = 2;
             // 
-            // lblSuccessTitle
+            // lblRevenueTitle
             // 
-            this.lblSuccessTitle.AutoSize = true;
-            this.lblSuccessTitle.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblSuccessTitle.ForeColor = System.Drawing.Color.FromArgb(110, 110, 110);
-            this.lblSuccessTitle.Location = new System.Drawing.Point(20, 50);
-            this.lblSuccessTitle.Name = "lblSuccessTitle";
-            this.lblSuccessTitle.Size = new System.Drawing.Size(109, 20);
-            this.lblSuccessTitle.TabIndex = 2;
-            this.lblSuccessTitle.Text = "SUCCESS RATE";
+            lblRevenueTitle.AutoSize = true;
+            lblRevenueTitle.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblRevenueTitle.ForeColor = Color.Gray;
+            lblRevenueTitle.Location = new Point(21, 20);
+            lblRevenueTitle.Margin = new Padding(4, 0, 4, 0);
+            lblRevenueTitle.Name = "lblRevenueTitle";
+            lblRevenueTitle.Size = new Size(196, 25);
+            lblRevenueTitle.TabIndex = 1;
+            lblRevenueTitle.Text = "REVENUE POTENTIAL";
             // 
-            // cardDelayed
+            // lblRevenueValue
             // 
-            this.cardDelayed.BackColor = System.Drawing.Color.White;
-            this.cardDelayed.Controls.Add(this.lblDelayedTitle);
-            this.cardDelayed.Controls.Add(this.lblDelayedValue);
-            this.cardDelayed.Controls.Add(this.accentDelayed);
-            this.cardDelayed.Location = new System.Drawing.Point(710, 15);
-            this.cardDelayed.Name = "cardDelayed";
-            this.cardDelayed.Size = new System.Drawing.Size(210, 80);
-            this.cardDelayed.TabIndex = 3;
+            lblRevenueValue.AutoSize = true;
+            lblRevenueValue.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblRevenueValue.Location = new Point(21, 53);
+            lblRevenueValue.Margin = new Padding(4, 0, 4, 0);
+            lblRevenueValue.Name = "lblRevenueValue";
+            lblRevenueValue.Size = new Size(131, 48);
+            lblRevenueValue.TabIndex = 2;
+            lblRevenueValue.Text = "₦0.0M";
             // 
-            // accentDelayed
+            // pnlKpiRevenueAccent
             // 
-            this.accentDelayed.BackColor = System.Drawing.Color.FromArgb(231, 76, 60);
-            this.accentDelayed.Dock = System.Windows.Forms.DockStyle.Left;
-            this.accentDelayed.Location = new System.Drawing.Point(0, 0);
-            this.accentDelayed.Name = "accentDelayed";
-            this.accentDelayed.Size = new System.Drawing.Size(5, 80);
-            this.accentDelayed.TabIndex = 0;
+            pnlKpiRevenueAccent.BackColor = Color.FromArgb(136, 23, 152);
+            pnlKpiRevenueAccent.Location = new Point(0, 0);
+            pnlKpiRevenueAccent.Margin = new Padding(4, 5, 4, 5);
+            pnlKpiRevenueAccent.Name = "pnlKpiRevenueAccent";
+            pnlKpiRevenueAccent.Size = new Size(7, 125);
+            pnlKpiRevenueAccent.TabIndex = 0;
             // 
-            // lblDelayedValue
+            // pnlKpiDelayed
             // 
-            this.lblDelayedValue.AutoSize = true;
-            this.lblDelayedValue.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblDelayedValue.ForeColor = System.Drawing.Color.FromArgb(40, 40, 40);
-            this.lblDelayedValue.Location = new System.Drawing.Point(20, 10);
-            this.lblDelayedValue.Name = "lblDelayedValue";
-            this.lblDelayedValue.Size = new System.Drawing.Size(48, 46);
-            this.lblDelayedValue.TabIndex = 1;
-            this.lblDelayedValue.Text = "12";
+            pnlKpiDelayed.BackColor = Color.White;
+            pnlKpiDelayed.Controls.Add(lblDelayedTitle);
+            pnlKpiDelayed.Controls.Add(lblDelayedValue);
+            pnlKpiDelayed.Controls.Add(pnlKpiDelayedAccent);
+            pnlKpiDelayed.Location = new Point(1036, 33);
+            pnlKpiDelayed.Margin = new Padding(4, 5, 4, 5);
+            pnlKpiDelayed.Name = "pnlKpiDelayed";
+            pnlKpiDelayed.Size = new Size(350, 125);
+            pnlKpiDelayed.TabIndex = 3;
             // 
             // lblDelayedTitle
             // 
-            this.lblDelayedTitle.AutoSize = true;
-            this.lblDelayedTitle.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblDelayedTitle.ForeColor = System.Drawing.Color.FromArgb(110, 110, 110);
-            this.lblDelayedTitle.Location = new System.Drawing.Point(20, 50);
-            this.lblDelayedTitle.Name = "lblDelayedTitle";
-            this.lblDelayedTitle.Size = new System.Drawing.Size(141, 20);
-            this.lblDelayedTitle.TabIndex = 2;
-            this.lblDelayedTitle.Text = "DELAYED PROJECTS";
+            lblDelayedTitle.AutoSize = true;
+            lblDelayedTitle.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lblDelayedTitle.ForeColor = Color.Gray;
+            lblDelayedTitle.Location = new Point(21, 20);
+            lblDelayedTitle.Margin = new Padding(4, 0, 4, 0);
+            lblDelayedTitle.Name = "lblDelayedTitle";
+            lblDelayedTitle.Size = new Size(182, 25);
+            lblDelayedTitle.TabIndex = 1;
+            lblDelayedTitle.Text = "DELAYED PROJECTS";
             // 
-            // btnRefresh
+            // lblDelayedValue
             // 
-            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(41, 128, 185);
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(840, 130);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(120, 35);
-            this.btnRefresh.TabIndex = 1;
-            this.btnRefresh.Text = "Refresh Data";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            lblDelayedValue.AutoSize = true;
+            lblDelayedValue.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblDelayedValue.Location = new Point(21, 53);
+            lblDelayedValue.Margin = new Padding(4, 0, 4, 0);
+            lblDelayedValue.Name = "lblDelayedValue";
+            lblDelayedValue.Size = new Size(41, 48);
+            lblDelayedValue.TabIndex = 2;
+            lblDelayedValue.Text = "0";
+            // 
+            // pnlKpiDelayedAccent
+            // 
+            pnlKpiDelayedAccent.BackColor = Color.FromArgb(245, 247, 250);
+            pnlKpiDelayedAccent.Location = new Point(0, 0);
+            pnlKpiDelayedAccent.Margin = new Padding(4, 5, 4, 5);
+            pnlKpiDelayedAccent.Name = "pnlKpiDelayedAccent";
+            pnlKpiDelayedAccent.Size = new Size(7, 125);
+            pnlKpiDelayedAccent.TabIndex = 0;
+            // 
+            // pnlWelcomeBanner
+            // 
+            pnlWelcomeBanner.BackColor = Color.White;
+            pnlWelcomeBanner.Controls.Add(lblWelcomeGreeting);
+            pnlWelcomeBanner.Controls.Add(lblWelcomeSubtitle);
+            pnlWelcomeBanner.Location = new Point(29, 175);
+            pnlWelcomeBanner.Margin = new Padding(4, 5, 4, 5);
+            pnlWelcomeBanner.Name = "pnlWelcomeBanner";
+            pnlWelcomeBanner.Size = new Size(1357, 117);
+            pnlWelcomeBanner.TabIndex = 4;
+            // 
+            // lblWelcomeGreeting
+            // 
+            lblWelcomeGreeting.AutoSize = true;
+            lblWelcomeGreeting.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            lblWelcomeGreeting.Location = new Point(21, 20);
+            lblWelcomeGreeting.Margin = new Padding(4, 0, 4, 0);
+            lblWelcomeGreeting.Name = "lblWelcomeGreeting";
+            lblWelcomeGreeting.Size = new Size(257, 38);
+            lblWelcomeGreeting.TabIndex = 0;
+            lblWelcomeGreeting.Text = "Good Morning ☀️";
+            // 
+            // lblWelcomeSubtitle
+            // 
+            lblWelcomeSubtitle.AutoSize = true;
+            lblWelcomeSubtitle.Font = new Font("Segoe UI", 9.5F);
+            lblWelcomeSubtitle.ForeColor = Color.Gray;
+            lblWelcomeSubtitle.Location = new Point(21, 67);
+            lblWelcomeSubtitle.Margin = new Padding(4, 0, 4, 0);
+            lblWelcomeSubtitle.Name = "lblWelcomeSubtitle";
+            lblWelcomeSubtitle.Size = new Size(382, 25);
+            lblWelcomeSubtitle.TabIndex = 1;
+            lblWelcomeSubtitle.Text = "Loading active projects requiring attention...";
+            // 
+            // pnlFeaturedProject
+            // 
+            pnlFeaturedProject.BackColor = Color.White;
+            pnlFeaturedProject.Controls.Add(lblFeaturedTitle);
+            pnlFeaturedProject.Controls.Add(lblFeaturedCustomer);
+            pnlFeaturedProject.Controls.Add(lblFeaturedStatus);
+            pnlFeaturedProject.Controls.Add(lblFeaturedDate);
+            pnlFeaturedProject.Controls.Add(btnOpenFeaturedWorkspace);
+            pnlFeaturedProject.Location = new Point(29, 317);
+            pnlFeaturedProject.Margin = new Padding(4, 5, 4, 5);
+            pnlFeaturedProject.Name = "pnlFeaturedProject";
+            pnlFeaturedProject.Size = new Size(1357, 167);
+            pnlFeaturedProject.TabIndex = 5;
+            // 
+            // lblFeaturedTitle
+            // 
+            lblFeaturedTitle.AutoSize = true;
+            lblFeaturedTitle.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblFeaturedTitle.Location = new Point(21, 25);
+            lblFeaturedTitle.Margin = new Padding(4, 0, 4, 0);
+            lblFeaturedTitle.Name = "lblFeaturedTitle";
+            lblFeaturedTitle.Size = new Size(185, 30);
+            lblFeaturedTitle.TabIndex = 0;
+            lblFeaturedTitle.Text = "Featured Project";
+            // 
+            // lblFeaturedCustomer
+            // 
+            lblFeaturedCustomer.AutoSize = true;
+            lblFeaturedCustomer.Font = new Font("Segoe UI", 9F);
+            lblFeaturedCustomer.ForeColor = Color.DarkSlateGray;
+            lblFeaturedCustomer.Location = new Point(21, 70);
+            lblFeaturedCustomer.Margin = new Padding(4, 0, 4, 0);
+            lblFeaturedCustomer.Name = "lblFeaturedCustomer";
+            lblFeaturedCustomer.Size = new Size(105, 25);
+            lblFeaturedCustomer.TabIndex = 1;
+            lblFeaturedCustomer.Text = "Customer: -";
+            // 
+            // lblFeaturedStatus
+            // 
+            lblFeaturedStatus.AutoSize = true;
+            lblFeaturedStatus.Font = new Font("Segoe UI", 9F);
+            lblFeaturedStatus.Location = new Point(21, 113);
+            lblFeaturedStatus.Margin = new Padding(4, 0, 4, 0);
+            lblFeaturedStatus.Name = "lblFeaturedStatus";
+            lblFeaturedStatus.Size = new Size(76, 25);
+            lblFeaturedStatus.TabIndex = 2;
+            lblFeaturedStatus.Text = "Status: -";
+            // 
+            // lblFeaturedDate
+            // 
+            lblFeaturedDate.AutoSize = true;
+            lblFeaturedDate.Font = new Font("Segoe UI", 9F);
+            lblFeaturedDate.ForeColor = Color.Gray;
+            lblFeaturedDate.Location = new Point(429, 113);
+            lblFeaturedDate.Margin = new Padding(4, 0, 4, 0);
+            lblFeaturedDate.Name = "lblFeaturedDate";
+            lblFeaturedDate.Size = new Size(89, 25);
+            lblFeaturedDate.TabIndex = 3;
+            lblFeaturedDate.Text = "Created: -";
+            // 
+            // btnOpenFeaturedWorkspace
+            // 
+            btnOpenFeaturedWorkspace.BackColor = Color.FromArgb(0, 120, 212);
+            btnOpenFeaturedWorkspace.FlatStyle = FlatStyle.Flat;
+            btnOpenFeaturedWorkspace.ForeColor = Color.White;
+            btnOpenFeaturedWorkspace.Location = new Point(1143, 58);
+            btnOpenFeaturedWorkspace.Margin = new Padding(4, 5, 4, 5);
+            btnOpenFeaturedWorkspace.Name = "btnOpenFeaturedWorkspace";
+            btnOpenFeaturedWorkspace.Size = new Size(186, 53);
+            btnOpenFeaturedWorkspace.TabIndex = 4;
+            btnOpenFeaturedWorkspace.Text = "Open Workspace";
+            btnOpenFeaturedWorkspace.UseVisualStyleBackColor = false;
+            // 
+            // pnlAttentionCenter
+            // 
+            pnlAttentionCenter.BackColor = Color.White;
+            pnlAttentionCenter.Controls.Add(lblAttentionCenterContent);
+            pnlAttentionCenter.Location = new Point(29, 508);
+            pnlAttentionCenter.Margin = new Padding(4, 5, 4, 5);
+            pnlAttentionCenter.Name = "pnlAttentionCenter";
+            pnlAttentionCenter.Size = new Size(664, 300);
+            pnlAttentionCenter.TabIndex = 6;
+            // 
+            // lblAttentionCenterContent
+            // 
+            lblAttentionCenterContent.Font = new Font("Segoe UI", 9.5F);
+            lblAttentionCenterContent.Location = new Point(21, 25);
+            lblAttentionCenterContent.Margin = new Padding(4, 0, 4, 0);
+            lblAttentionCenterContent.Name = "lblAttentionCenterContent";
+            lblAttentionCenterContent.Size = new Size(621, 250);
+            lblAttentionCenterContent.TabIndex = 0;
+            lblAttentionCenterContent.Text = "Attention Required\n\nAnalyzing operational warnings...";
+            // 
+            // pnlActivityFeed
+            // 
+            pnlActivityFeed.BackColor = Color.White;
+            pnlActivityFeed.Controls.Add(lblRecentActivityFeed);
+            pnlActivityFeed.Location = new Point(721, 508);
+            pnlActivityFeed.Margin = new Padding(4, 5, 4, 5);
+            pnlActivityFeed.Name = "pnlActivityFeed";
+            pnlActivityFeed.Size = new Size(664, 300);
+            pnlActivityFeed.TabIndex = 7;
+            // 
+            // lblRecentActivityFeed
+            // 
+            lblRecentActivityFeed.Font = new Font("Segoe UI", 9.5F);
+            lblRecentActivityFeed.Location = new Point(21, 25);
+            lblRecentActivityFeed.Margin = new Padding(4, 0, 4, 0);
+            lblRecentActivityFeed.Name = "lblRecentActivityFeed";
+            lblRecentActivityFeed.Size = new Size(621, 250);
+            lblRecentActivityFeed.TabIndex = 0;
+            lblRecentActivityFeed.Text = "Recent Activity\n\nLoading activity stream...";
+            // 
+            // pnlBusinessHealth
+            // 
+            pnlBusinessHealth.BackColor = Color.White;
+            pnlBusinessHealth.Controls.Add(lblBusinessHealthLegend);
+            pnlBusinessHealth.Location = new Point(29, 833);
+            pnlBusinessHealth.Margin = new Padding(4, 5, 4, 5);
+            pnlBusinessHealth.Name = "pnlBusinessHealth";
+            pnlBusinessHealth.Size = new Size(664, 333);
+            pnlBusinessHealth.TabIndex = 8;
+            // 
+            // lblBusinessHealthLegend
+            // 
+            lblBusinessHealthLegend.Font = new Font("Segoe UI", 9.5F);
+            lblBusinessHealthLegend.Location = new Point(21, 25);
+            lblBusinessHealthLegend.Margin = new Padding(4, 0, 4, 0);
+            lblBusinessHealthLegend.Name = "lblBusinessHealthLegend";
+            lblBusinessHealthLegend.Size = new Size(621, 283);
+            lblBusinessHealthLegend.TabIndex = 0;
+            lblBusinessHealthLegend.Text = "Business Health\n\nCalculating metrics...";
+            // 
+            // pnlActiveSnapshot
+            // 
+            pnlActiveSnapshot.BackColor = Color.White;
+            pnlActiveSnapshot.Controls.Add(dgvActiveSnapshot);
+            pnlActiveSnapshot.Location = new Point(721, 833);
+            pnlActiveSnapshot.Margin = new Padding(4, 5, 4, 5);
+            pnlActiveSnapshot.Name = "pnlActiveSnapshot";
+            pnlActiveSnapshot.Size = new Size(664, 333);
+            pnlActiveSnapshot.TabIndex = 9;
+            // 
+            // dgvActiveSnapshot
+            // 
+            dgvActiveSnapshot.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvActiveSnapshot.BackgroundColor = Color.White;
+            dgvActiveSnapshot.BorderStyle = BorderStyle.None;
+            dgvActiveSnapshot.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvActiveSnapshot.Location = new Point(21, 25);
+            dgvActiveSnapshot.Margin = new Padding(4, 5, 4, 5);
+            dgvActiveSnapshot.Name = "dgvActiveSnapshot";
+            dgvActiveSnapshot.RowHeadersWidth = 62;
+            dgvActiveSnapshot.Size = new Size(621, 283);
+            dgvActiveSnapshot.TabIndex = 0;
+            // 
+            // pnlTopActiveCards
+            // 
+            pnlTopActiveCards.Location = new Point(29, 1192);
+            pnlTopActiveCards.Margin = new Padding(4, 5, 4, 5);
+            pnlTopActiveCards.Name = "pnlTopActiveCards";
+            pnlTopActiveCards.Size = new Size(1357, 200);
+            pnlTopActiveCards.TabIndex = 10;
+            // 
+            // lblTotalQuotedValue
+            // 
+            lblTotalQuotedValue.Location = new Point(0, 0);
+            lblTotalQuotedValue.Name = "lblTotalQuotedValue";
+            lblTotalQuotedValue.Size = new Size(100, 23);
+            lblTotalQuotedValue.TabIndex = 0;
+            lblTotalQuotedValue.Visible = false;
+            // 
+            // btnQuickNewCustomer
+            // 
+            btnQuickNewCustomer.Location = new Point(0, 0);
+            btnQuickNewCustomer.Name = "btnQuickNewCustomer";
+            btnQuickNewCustomer.Size = new Size(75, 23);
+            btnQuickNewCustomer.TabIndex = 0;
+            btnQuickNewCustomer.Visible = false;
+            // 
+            // btnQuickNewProject
+            // 
+            btnQuickNewProject.Location = new Point(0, 0);
+            btnQuickNewProject.Name = "btnQuickNewProject";
+            btnQuickNewProject.Size = new Size(75, 23);
+            btnQuickNewProject.TabIndex = 0;
+            btnQuickNewProject.Visible = false;
+            // 
+            // btnQuickNewQuotation
+            // 
+            btnQuickNewQuotation.Location = new Point(0, 0);
+            btnQuickNewQuotation.Name = "btnQuickNewQuotation";
+            btnQuickNewQuotation.Size = new Size(75, 23);
+            btnQuickNewQuotation.TabIndex = 0;
+            btnQuickNewQuotation.Visible = false;
+            // 
+            // btnQuickRecordExpense
+            // 
+            btnQuickRecordExpense.Location = new Point(0, 0);
+            btnQuickRecordExpense.Name = "btnQuickRecordExpense";
+            btnQuickRecordExpense.Size = new Size(75, 23);
+            btnQuickRecordExpense.TabIndex = 0;
+            btnQuickRecordExpense.Visible = false;
             // 
             // DashboardControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(245, 247, 250);
-            this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.pnlKpiContainer);
-            this.Name = "DashboardControl";
-            this.Size = new System.Drawing.Size(1000, 650);
-            this.pnlKpiContainer.ResumeLayout(false);
-            this.cardTotal.ResumeLayout(false);
-            this.cardTotal.PerformLayout();
-            this.cardActive.ResumeLayout(false);
-            this.cardActive.PerformLayout();
-            this.cardSuccess.ResumeLayout(false);
-            this.cardSuccess.PerformLayout();
-            this.cardDelayed.ResumeLayout(false);
-            this.cardDelayed.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
+            BackColor = Color.FromArgb(245, 247, 250);
+            Controls.Add(pnlKpiTotal);
+            Controls.Add(pnlKpiActive);
+            Controls.Add(pnlKpiRevenue);
+            Controls.Add(pnlKpiDelayed);
+            Controls.Add(pnlWelcomeBanner);
+            Controls.Add(pnlFeaturedProject);
+            Controls.Add(pnlAttentionCenter);
+            Controls.Add(pnlActivityFeed);
+            Controls.Add(pnlBusinessHealth);
+            Controls.Add(pnlActiveSnapshot);
+            Controls.Add(pnlTopActiveCards);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "DashboardControl";
+            Size = new Size(1429, 1433);
+            pnlKpiTotal.ResumeLayout(false);
+            pnlKpiTotal.PerformLayout();
+            pnlKpiActive.ResumeLayout(false);
+            pnlKpiActive.PerformLayout();
+            pnlKpiRevenue.ResumeLayout(false);
+            pnlKpiRevenue.PerformLayout();
+            pnlKpiDelayed.ResumeLayout(false);
+            pnlKpiDelayed.PerformLayout();
+            pnlWelcomeBanner.ResumeLayout(false);
+            pnlWelcomeBanner.PerformLayout();
+            pnlFeaturedProject.ResumeLayout(false);
+            pnlFeaturedProject.PerformLayout();
+            pnlAttentionCenter.ResumeLayout(false);
+            pnlActivityFeed.ResumeLayout(false);
+            pnlBusinessHealth.ResumeLayout(false);
+            pnlActiveSnapshot.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvActiveSnapshot).EndInit();
+            ResumeLayout(false);
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel pnlKpiContainer;
-        private System.Windows.Forms.Panel cardTotal;
-        private System.Windows.Forms.Panel accentTotal;
-        private System.Windows.Forms.Label lblTotalValue;
+        private System.Windows.Forms.Panel pnlKpiTotal;
+        private System.Windows.Forms.Panel pnlKpiTotalAccent;
         private System.Windows.Forms.Label lblTotalTitle;
-        private System.Windows.Forms.Panel cardActive;
-        private System.Windows.Forms.Panel accentActive;
-        private System.Windows.Forms.Label lblActiveValue;
+        private System.Windows.Forms.Label lblTotalValue;
+
+        private System.Windows.Forms.Panel pnlKpiActive;
+        private System.Windows.Forms.Panel pnlKpiActiveAccent;
         private System.Windows.Forms.Label lblActiveTitle;
-        private System.Windows.Forms.Panel cardSuccess;
-        private System.Windows.Forms.Panel accentSuccess;
-        private System.Windows.Forms.Label lblSuccessValue;
-        private System.Windows.Forms.Label lblSuccessTitle;
-        private System.Windows.Forms.Panel cardDelayed;
-        private System.Windows.Forms.Panel accentDelayed;
-        private System.Windows.Forms.Label lblDelayedValue;
+        private System.Windows.Forms.Label lblActiveValue;
+
+        private System.Windows.Forms.Panel pnlKpiRevenue;
+        private System.Windows.Forms.Panel pnlKpiRevenueAccent;
+        private System.Windows.Forms.Label lblRevenueTitle;
+        private System.Windows.Forms.Label lblRevenueValue;
+
+        private System.Windows.Forms.Panel pnlKpiDelayed;
+        private System.Windows.Forms.Panel pnlKpiDelayedAccent;
         private System.Windows.Forms.Label lblDelayedTitle;
-        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Label lblDelayedValue;
+
+        private System.Windows.Forms.Panel pnlWelcomeBanner;
+        private System.Windows.Forms.Label lblWelcomeGreeting;
+        private System.Windows.Forms.Label lblWelcomeSubtitle;
+
+        private System.Windows.Forms.Panel pnlFeaturedProject;
+        private System.Windows.Forms.Label lblFeaturedTitle;
+        private System.Windows.Forms.Label lblFeaturedCustomer;
+        private System.Windows.Forms.Label lblFeaturedStatus;
+        private System.Windows.Forms.Label lblFeaturedDate;
+        private System.Windows.Forms.Button btnOpenFeaturedWorkspace;
+
+        private System.Windows.Forms.Panel pnlAttentionCenter;
+        private System.Windows.Forms.Label lblAttentionCenterContent;
+
+        private System.Windows.Forms.Panel pnlActivityFeed;
+        private System.Windows.Forms.Label lblRecentActivityFeed;
+
+        private System.Windows.Forms.Panel pnlBusinessHealth;
+        private System.Windows.Forms.Label lblBusinessHealthLegend;
+
+        private System.Windows.Forms.Panel pnlActiveSnapshot;
+        private System.Windows.Forms.DataGridView dgvActiveSnapshot;
+
+        private System.Windows.Forms.FlowLayoutPanel pnlTopActiveCards;
+
+        private System.Windows.Forms.Label lblTotalQuotedValue;
+
+        private System.Windows.Forms.Button btnQuickNewCustomer;
+        private System.Windows.Forms.Button btnQuickNewProject;
+        private System.Windows.Forms.Button btnQuickNewQuotation;
+        private System.Windows.Forms.Button btnQuickRecordExpense;
     }
 }

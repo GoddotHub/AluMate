@@ -29,25 +29,25 @@ def create_project(db: Session, project_data: ProjectCreate):
 
 
 def get_projects(db: Session):
-    # Eager load the customer relationship to access the company name
-    projects = db.query(Project).options(joinedload(Project.customer)).all()
-
+    projects = db.query(Project).all()
     result = []
     for p in projects:
-        # Map database entity and explicitly extract the customer name
-        p_dict = {
-            "id": p.id,
-            "customer_id": p.customer_id,
-            "customer_name": p.customer.name if p.customer else None,
-            "name": p.name,
-            "description": p.description,
-            "location": p.location,
-            "status": p.status,
-            "quoted_price": p.quoted_price,
-            "created_at": p.created_at,
-            "updated_at": p.updated_at,
-        }
-        result.append(p_dict)
+        result.append(
+            {
+                "id": p.id,
+                "customer_id": p.customer_id,
+                "customer_name": (
+                    p.customer.name if p.customer else f"Customer #{p.customer_id}"
+                ),
+                "name": p.name,
+                "description": p.description,
+                "location": p.location,
+                "status": p.status,
+                "quoted_price": p.quoted_price,
+                "created_at": p.created_at,
+                "updated_at": p.updated_at,
+            }
+        )
     return result
 
 

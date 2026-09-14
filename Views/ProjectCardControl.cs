@@ -51,15 +51,16 @@ namespace AluMate.Views
         {
             if (_project == null) return;
 
+            // Hero element
             lblName.Text = string.IsNullOrEmpty(_project.name) ? "UNTITLED PROJECT" : _project.name.ToUpper();
-            lblProjectId.Text = $"Project #{_project.id:D3}";
 
-            // Display human-readable customer name instead of "Customer ID: 1"
-            string displayName = string.IsNullOrEmpty(_project.customer_name)
+            // Automatic Category Badge / Type Derivation
+            lblCategoryType.Text = DeriveProjectCategory(_project.name);
+
+            // Corporate customer name
+            lblCustomerName.Text = string.IsNullOrEmpty(_project.customer_name)
                 ? $"Customer #{_project.customer_id}"
                 : _project.customer_name;
-
-            lblCustomerId.Text = displayName; // Or rename control variable to lblCustomerName for clarity
 
             string statusText = string.IsNullOrEmpty(_project.status) ? "active" : _project.status.ToLower();
             if (statusText == "active")
@@ -73,7 +74,24 @@ namespace AluMate.Views
                 lblStatus.ForeColor = Color.FromArgb(216, 59, 1);
             }
 
-            lblCreatedDate.Text = "09 Sept 2026";
+            lblCreatedDate.Text = $"Created: {_project.created_at:dd MMM yyyy}";
+        }
+
+        private string DeriveProjectCategory(string projectName)
+        {
+            if (string.IsNullOrEmpty(projectName)) return "🛠 General Project";
+
+            string lower = projectName.ToLower();
+            if (lower.Contains("renov") || lower.Contains("office") || lower.Contains("interior"))
+                return "🏢 Commercial Interior";
+            if (lower.Contains("storefront") || lower.Contains("shop") || lower.Contains("entrance"))
+                return "🪟 Storefront System";
+            if (lower.Contains("curtain") || lower.Contains("facade") || lower.Contains("wall"))
+                return "🏙 Glass Facade";
+            if (lower.Contains("window") || lower.Contains("sliding") || lower.Contains("residential"))
+                return "🏠 Residential";
+
+            return "⚙️ Aluminum Fabrication";
         }
 
         private void btnOpen_Click(object? sender, EventArgs e)

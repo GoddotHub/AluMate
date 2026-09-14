@@ -58,7 +58,7 @@
             this.lblHeaderTitle.Name = "lblHeaderTitle";
             this.lblHeaderTitle.Size = new System.Drawing.Size(225, 37);
             this.lblHeaderTitle.TabIndex = 0;
-            this.lblHeaderTitle.Text = "Project Portfolio";
+            this.lblHeaderTitle.Text = "Dashboard";
             // 
             // btnNewProject
             // 

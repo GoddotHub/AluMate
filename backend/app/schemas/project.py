@@ -34,12 +34,12 @@ class ProjectUpdate(BaseModel):
 class ProjectResponse(BaseModel):
     id: int
     customer_id: int
-    customer_name: str | None = None  # Added field for human-readable name
+    customer_name: str | None = None  # Human-readable company name
     name: str
-    description: str | None
-    location: str | None
+    description: str | None = None
+    location: str | None = None  # e.g., "Ibadan"
     status: str
-    quoted_price: float | None
+    quoted_price: float | None = None  # e.g., 3450000.00
     created_at: datetime
     updated_at: datetime
 
